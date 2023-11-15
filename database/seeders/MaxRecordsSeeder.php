@@ -15,7 +15,7 @@ class MaxRecordsSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('max_records')->insert([
+        /*DB::table('max_records')->insert([
             'menu_id'=>2,
             'training_date'=>'2023-06-17',
             'max_weight'=>2.6,
@@ -39,6 +39,6 @@ class MaxRecordsSeeder extends Seeder
             'menu_id'=>2,
             'training_date'=>'2023-06-21',
             'max_weight'=>6.6,
-            ]);
+            ]);*/
     }
 }

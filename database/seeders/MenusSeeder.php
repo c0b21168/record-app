@@ -16,29 +16,35 @@ class MenusSeeder extends Seeder
      */
     public function run()
     {
-        /*DB::table('menus')->insert([
+        DB::table('menus')->insert([
             'id' => 1,
-            'name' =>'ベンチプレス'
+            'name' =>'ベンチプレス',
+            'user_id' =>1
             ]);
         DB::table('menus')->insert([
             'id' => 2,
-            'name' =>'ダンベルフライ'
+            'name' =>'ダンベルフライ',
+            'user_id' =>1
             ]);
         DB::table('menus')->insert([
             'id' => 3,
-            'name' =>'ダンベルカール'
+            'name' =>'ダンベルカール',
+            'user_id' =>1
             ]);
         DB::table('menus')->insert([
             'id' => 4,
-            'name' =>'プリチャーカール'
+            'name' =>'プリチャーカール',
+            'user_id' =>1
             ]);
         DB::table('menus')->insert([
             'id' => 5,
-            'name' =>'シットアップベンチ'
+            'name' =>'シットアップベンチ',
+            'user_id' =>1
             ]);
         DB::table('menus')->insert([
             'id' => 6,
-            'name' =>'懸垂'
-            ]);*/
+            'name' =>'懸垂',
+            'user_id' =>1
+            ]);
     }
 }

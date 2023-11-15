@@ -14,6 +14,9 @@ class postController extends Controller
     {
     $input = $request['max_records'];
     $max->fill($input)->save();
-    return redirect('max_records/pos');
+    return view('max_records/pos');
+    }
+    public function record(Menus $menus, Request $request, MaxRecords $max){
+        return view('records/record_post');
     }
 }

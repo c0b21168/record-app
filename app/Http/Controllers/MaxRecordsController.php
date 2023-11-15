@@ -15,7 +15,7 @@ class MaxRecordsController extends Controller
     {
     $input = $request['max_records'];
     $max->fill($input)->save();
-    return redirect('/pos/' . $max->id);
+    return view('max_records/pos');
     }
     public function show(Request $request, MaxRecords $max){
         $menuName = $request->records;

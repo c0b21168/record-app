@@ -13,7 +13,7 @@
             日付を選択してください
             <div>
                 <select name="post[training_date]">
-                    @foreach($records as $records)
+                    @foreach($records->unique("training_date") as $records)
                         <option value="{{ $records->training_date}}">{{ $records->training_date }}</option>
                     @endforeach
                 </select>

@@ -8,12 +8,7 @@
     </head>
     <x-app-layout>
         <body>
-            @foreach ($record as $record)
-                <div>記録{{$record->Menu->name}}|{{$record->weight}}kg{{$record->times}}回
-                    <div class="edit"><a href="past_record/{{ $record->id }}/past_edit">edit</a></div>
-                </div>
-            @endforeach
-            
+            登録完了しました。
         </body>
     </x-app-layout>
 </html>

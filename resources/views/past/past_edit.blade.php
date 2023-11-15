@@ -8,10 +8,11 @@
     </head>
     <x-app-layout>
         <body>
-            <form action="/record_post" method="POST">
+            <form action="/past_record/{{$records->id}}" method="POST">
                 @csrf
+                @method('PUT')
                 日付: 
-                <input type="date" name="records[training_date]"></input>
+                <input type="date" name="records[training_date]" value = {{$records->training_date}}></input>
                 <div class="weight">
                     重さ: 
                     <input

@@ -31,7 +31,10 @@ Route::post('/posts', [RecordsController::class, 'store']);
 Route::get('/max',[MaxRecordsController::class,'max_records'])->name('max');
 Route::get('/post',[postController::class,'post']);
 Route::post('/pos',[postController::class,'max_store']);
+Route::post('/record_post',[postController::class,'record']);
 Route::post('/graph', [MaxRecordsController::class,"show"]);
+Route::get('/past_record/{records}/past_edit/',[RecordsController::class,"edit"]);
+Route::match(['get','put'],'/past_record/{records}',[RecordsController::class,'update']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

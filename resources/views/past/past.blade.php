@@ -10,6 +10,7 @@
         <body>
         <form action="/past_record" method="POST">
             @csrf
+            <input type="hidden" name="records[user_id]" value="{{$user_id}}">
             日付を選択してください
             <div>
                 <select name="post[training_date]">

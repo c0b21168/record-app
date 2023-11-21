@@ -8,7 +8,8 @@ use App\Models\MaxRecords;
 class postController extends Controller
 {
     public function post(Menus $menus, Request $request, MaxRecords $max){
-        return view('max_records/post')->with(['menus'=>$menus->get()]);
+        return view('max_records/post')->with(['menus'=>$menus->get(),
+                                            'user_id'=>$id = \Auth::id()]);
     }
     public function max_store(Request $request, MaxRecords $max)
     {

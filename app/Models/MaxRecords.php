@@ -10,6 +10,7 @@ class MaxRecords extends Model
     use HasFactory;
     protected $table = 'max_records';
     protected $fillable =[
+        'user_id',
         'menu_id',
         'training_date',
         'max_weight'

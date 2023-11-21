@@ -7,21 +7,25 @@ use App\Models\records;
 use App\Models\Menus;
 use App\Http\Requests\PostRequest;
 
+
 class RecordsController extends Controller
 {
     public function records(Menus $menus){
-        return view('records/records')->with(['menus'=>$menus->get()]);
+        return view('records/records')->with(['menus'=>$menus->get(),
+                                                'user_id'=>$id = \Auth::id()]);
+                                            
     }
     public function store(Request $request, records $records)
     {
     $input = $request['records'];
     $records->fill($input)->save();
-    return redirect('/posts/' . $records->id);
+    return view("records/record_post");
     }
     public function edit(Request $request, records $records, Menus $menus)
     {
         return view('past.past_edit')->with(['menus'=>$menus->get(),
-                                            'records'=>$records]);
+                                            'records'=>$records,
+                                            'user_id'=>$id = \Auth::id()]);
     }
     public function update(Request $request, records $records)
     {

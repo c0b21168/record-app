@@ -11,6 +11,7 @@
             <form action="/past_record/{{$records->id}}" method="POST">
                 @csrf
                 @method('PUT')
+                <input type="hidden" name="records[user_id]" value="{{$user_id}}">
                 日付: 
                 <input type="date" name="records[training_date]" value = {{$records->training_date}}></input>
                 <div class="weight">

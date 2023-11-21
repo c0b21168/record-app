@@ -10,6 +10,7 @@ class records extends Model
     use HasFactory;
     protected $table ='records';
     protected $fillable =[
+        'user_id',
         'weight',
         'times',
         'menu_id',

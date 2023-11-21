@@ -7,9 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class post extends Model
 {
-    use HasFactory
+    use HasFactory;
     protected $table ='max_records';
     protected $fillable =[
+        'user_id',
         'max_weight',
         'menu_id',
         'training_date',

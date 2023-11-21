@@ -10,6 +10,7 @@
         <body>
             <form action="/pos" method="POST">
                 @csrf
+                <input type="hidden" name="max_records[user_id]" value="{{$user_id}}"></input>
                 日付: 
                 <input type="date" name="max_records[training_date]"></input>
                 <div class="weight">

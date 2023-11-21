@@ -10,6 +10,7 @@
         <body>
             <form action="/graph" method="POST">
                 @csrf
+                <input type="hidden" name="records[user_id]" value="{{$user_id}}">
                 <div class="menus">
                     <select class="form-select" id="menu_id" name="records[menu_id]">
                         @foreach ($menus as $menus)

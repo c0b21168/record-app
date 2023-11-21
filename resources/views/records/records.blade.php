@@ -10,6 +10,7 @@
         <body>
             <form action="/record_post" method="POST">
                 @csrf
+                <input type="hidden" name="records[user_id]" value="{{$user_id}}">
                 日付: 
                 <input type="date" name="records[training_date]"></input>
                 <div class="weight">

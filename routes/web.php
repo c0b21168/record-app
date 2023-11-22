@@ -21,7 +21,7 @@ use App\Http\Controllers\postController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 Route::get('/menus', [MenusController::class,'menus'])->name('menus');
 Route::get('/records',[RecordsController::class,'records'])->name('records');

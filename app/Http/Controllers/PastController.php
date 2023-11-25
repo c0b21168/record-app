@@ -6,13 +6,13 @@ use Illuminate\Http\Request;
 use App\Models\Past;
 use App\Models\records;
 use App\Models\Menus;
-
+use App\Http\Requests\PostRequest;
 
 class pastController extends Controller
 {
     public function past(Request $request, Past $past, records $records)
     {
-        $input = $request->input('records');
+        #$input = $request->input('records');
         return view("past.past")->with(["records"=>$records->get(),
                                         "user_id"=>$id = \Auth::id()]);
     }

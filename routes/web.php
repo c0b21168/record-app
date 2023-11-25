@@ -24,7 +24,8 @@ Route::get('/', function () {
     return view('auth.login');
 });
 Route::get('/menus', [MenusController::class,'menus'])->name('menus');
-Route::get('/records',[RecordsController::class,'records'])->name('records');
+Route::post('/menus/menu_add/menus', [MenusController::class,'post']);
+Route::get('/records',[RecordsController::class,'records'])->middleware(['auth', 'verified'])->name('records');
 Route::get('/past',[PastController::class,'past'])->name('past');
 Route::post('/past_record',[PastController::class,'pastRecords']);
 Route::post('/posts', [RecordsController::class, 'store']);
@@ -35,6 +36,7 @@ Route::post('/record_post',[RecordsController::class,'store']);
 Route::post('/graph', [MaxRecordsController::class,"show"]);
 Route::get('/past_record/{records}/past_edit/',[RecordsController::class,"edit"]);
 Route::match(['get','put'],'/past_record/{records}',[RecordsController::class,'update']);
+Route::get('/menus/menu_add',[MenusController::class,'store']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

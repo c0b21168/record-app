@@ -19,6 +19,7 @@
                     @endforeach
                 </select>
             </div>
+            <p class="title__error" style="color:red">{{ $errors->first('post.training_date') }}</p>
             <input type="submit" value="表示"/>
         </form>
         </body>

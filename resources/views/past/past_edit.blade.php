@@ -14,6 +14,7 @@
                 <input type="hidden" name="records[user_id]" value="{{$user_id}}">
                 日付: 
                 <input type="date" name="records[training_date]" value = {{$records->training_date}}></input>
+                <p class="title__error" style="color:red">{{ $errors->first('records.training_date') }}</p>
                 <div class="weight">
                     重さ: 
                     <input
@@ -22,6 +23,7 @@
                         pattern="^([1-9]\d*|0)(\.\d+)?{1,5}$"
                         inputmode="numeric"
                     >
+                    <p class="title__error" style="color:red">{{ $errors->first('records.weight') }}</p>
                 <div class="times">
                     回数: 
                     <input
@@ -30,6 +32,7 @@
                         pattern="^[1-9][0-9]*{1,2}$"
                         inputmode="numeric"
                     >
+                    <p class="title__error" style="color:red">{{ $errors->first('records.times') }}</p>
                 </div>
                 </div>
                 <div class="menus">

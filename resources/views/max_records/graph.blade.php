@@ -40,7 +40,7 @@
 				options: {
 					title: {
 						display: true,
-						text: 'ログ'
+						text: 'MAX記録'
 					}
 				}
    });

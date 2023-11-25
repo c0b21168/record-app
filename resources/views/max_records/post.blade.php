@@ -13,6 +13,7 @@
                 <input type="hidden" name="max_records[user_id]" value="{{$user_id}}"></input>
                 日付: 
                 <input type="date" name="max_records[training_date]"></input>
+                <p class="title__error" style="color:red">{{ $errors->first('max_records.training_date') }}</p>
                 <div class="weight">
                     重さ: 
                     <input
@@ -21,6 +22,7 @@
                         pattern="^([1-9]\d*|0)(\.\d+)?{1,5}$"
                         inputmode="numeric"
                     >
+                    <p class="title__error" style="color:red">{{ $errors->first('max_records.max_weight') }}</p>
                 <div class="menus">
                     <select class="form-select" id="menu_id" name="max_records[menu_id]">
                         @foreach ($menus as $menus)

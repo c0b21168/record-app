@@ -15,7 +15,7 @@ class RecordsController extends Controller
                                                 'user_id'=>$id = \Auth::id()]);
                                             
     }
-    public function store(Request $request, records $records)
+    public function store(PostRequest $request, records $records)
     {
     $input = $request['records'];
     $records->fill($input)->save();
@@ -27,12 +27,13 @@ class RecordsController extends Controller
                                             'records'=>$records,
                                             'user_id'=>$id = \Auth::id()]);
     }
-    public function update(Request $request, records $records)
+    public function update(PostRequest $request, records $records)
     {
     $input_pos = $request['records'];
     $records->fill($input_pos)->save();
-    $input = $request->input('records');
-    return view('past.past')->with(["records"=>$records->get()]);
+    #$input = $request->input('records');
+    return view('past.past')->with(["records"=>$records->get(),
+                                    'user_id'=>$id = \Auth::id()]);
     #return redirect('past.past' . $records->id);
     }
     

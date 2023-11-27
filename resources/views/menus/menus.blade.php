@@ -13,7 +13,7 @@
             @foreach($menus as $menus)
                 <div class="menus">種目名: {{$menus->name}}</div>
             @endforeach
-            <button type=“button” onclick="location.href='/menus/menu_add'">追加</button>
+            <button type=“button”  onclick="location.href='/menus/menu_add'">追加</button>
         </body>
     </x-app-layout>
 </html>

@@ -5,8 +5,14 @@
         <title>Menus</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <x-app-layout>
+        <x-slot name="header">
+            <h2 class=" font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('筋トレ記録') }}
+            </h2>
+        </x-slot>
         <body>
             <form action="/record_post" method="POST">
                 @csrf
@@ -44,7 +50,7 @@
                     </label>
                 </div>
                 <p class="title__error" style="color:red">{{ $errors->first('records.menu_id') }}</p>
-                <input type="submit" value="登録"/>
+                <input type="submit" value="登録" />
             </form>
         </body>
     </x-app-layout>

@@ -12,8 +12,17 @@ module.exports = {
 
     theme: {
         extend: {
+            colors: {
+                red: {
+                500: "#ef4444",
+              },
+                indigo:{
+                    400: "#818cf8"
+                },
+            },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+            
             },
         },
     },

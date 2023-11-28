@@ -10,7 +10,11 @@
         <body>
             @foreach ($record as $record)
                 <div>記録{{$record->Menu->name}}|{{$record->weight}}kg{{$record->times}}回
-                    <div class="edit"><a href="past_record/{{ $record->id }}/past_edit">edit</a></div>
+                    <button class="rounded bg-indigo-600 px-4 py-2 mt-4" type=“button”>
+                        <a href="past_record/{{ $record->id }}/past_edit">
+                            <div class="text-white">edit</div>
+                        </a>
+                    </button>
                 </div>
             @endforeach
             

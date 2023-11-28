@@ -43,7 +43,9 @@
                     </select>
                     </label>
                 </div>
-                <input type="submit" value="登録"/>
+                <button class="rounded bg-indigo-600 px-4 py-2 mt-4" type=“button”>
+                    <div class="text-white">登録</div>
+                </button>
             </form>
         </body>
     </x-app-layout>

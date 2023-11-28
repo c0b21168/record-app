@@ -12,11 +12,9 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        <div class="text-white">{{ __('Dashboard') }}</div>
-                    </x-nav-link>
+                    
                     <x-nav-link :href="route('menus')" :active="request()->routeIs('menus')">
-                        <div class="text-white">{{ __('種目一覧') }}</div>
+                        <div class="text-white font-bold">{{ __('種目一覧') }}</div>
                     </x-nav-link>
                     <x-nav-link :href="route('records')" :active="request()->routeIs('records')">
                         <div class="text-white">{{ __('筋トレ記録') }}</div>

@@ -13,7 +13,9 @@
                 <input type="hidden" name="menus[user_id]" value="{{$user_id}}">
                 <input type="text" name="menus[name]"></input>
                 <p class="title__error" style="color:red">{{ $errors->first('menus.name') }}</p>
-                <input type="submit" value="登録"/>
+                <button class="rounded bg-indigo-600 px-4 py-2 mt-4" type=“button”  onclick="location.href='/menus/menu_add'">
+                    <div class="text-white">登録</div>
+                </button>
             </form>
         </body>
     </x-app-layout>

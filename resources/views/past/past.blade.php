@@ -7,6 +7,11 @@
         l<link href="https://fonts.googeapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <x-app-layout>
+        <x-slot name="header">
+            <h2 class=" font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('過去の記録') }}
+            </h2>
+        </x-slot>
         <body>
         <form action="/past_record" method="POST">
             @csrf
@@ -20,7 +25,9 @@
                 </select>
             </div>
             <p class="title__error" style="color:red">{{ $errors->first('post.training_date') }}</p>
-            <input type="submit" value="表示"/>
+            <button class="rounded bg-indigo-600 px-4 py-2 mt-4" type=“button”>
+                <div class="text-white">表示</div>
+            </button>
         </form>
         </body>
     </x-app-layout>

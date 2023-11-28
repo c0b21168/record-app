@@ -7,9 +7,12 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <x-app-layout>
+    	<x-slot name="header">
+            <h2 class=" font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('グラフ') }}({{$name}})
+            </h2>
+        </x-slot>
         <body>
-            <h1>グラフ</h1>
-        
             <canvas id="myChart"></canvas>
 		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 	<!-- グラフを描画 -->
@@ -32,15 +35,16 @@
 				{
 					label: "重量",
 					data: {{$log_list}},
-					borderColor: "rgba(0,0,255,1)",
-         			backgroundColor: "rgba(0,0,0,155)"
+					tension:0.0,
+					borderColor: "rgba(255,0,0,1)",
+         			backgroundColor: "rgba(0,0,0,0)"
 				}
 				]
 				},
 				options: {
 					title: {
 						display: true,
-						text: 'MAX記録'
+						text:"最大重量グラフ"
 					}
 				}
    });

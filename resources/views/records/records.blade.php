@@ -22,7 +22,7 @@
                 <input type="date" name="records[training_date]"></input>
                 <p class="title__error" style="color:red">{{ $errors->first('records.training_date') }}</p>
                 <div class="weight">
-                    重さ: 
+                    重量: 
                     <input
                         type="text"
                         name = "records[weight]"
@@ -42,6 +42,7 @@
                 </div>
                 </div>
                 <div class="menus">
+                    種目:
                     <select class="form-select" id="menu_id" name="records[menu_id]">
                         @foreach ($menus as $menus)
                             <option value="{{ $menus->id }}" >{{$menus->name}}</option></option>
